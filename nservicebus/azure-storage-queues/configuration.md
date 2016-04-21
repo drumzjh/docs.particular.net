@@ -61,8 +61,8 @@ snippet:AzureStorageQueueUseAccountNamesInsteadOfConnectionStrings
 
 NOTE: This feature is not available in `NServiceBus.Azure.Transports.WindowsAzureStorageQueues` Versions 6 and below.
 
-## FIPS compliance
-By default The Azure Storage Queues Transport uses `MD5` hashing algorithm for renaming queues when an entity name is too large. This algorithm is not FIPS compliant. If your solution requires FIPS compliance, you can enable renaming queues with `SHA1` hashing algorithm by specifing `UseSha1ForShortening` when configuring the `AzureStorageQueueTransport`:
+## Hashing algorithms
+By default The Azure Storage Queues Transport uses `MD5` hashing algorithm for renaming queues when an entity name is too large. If your solution requires a stronger algorithm, you can enable renaming queues with `SHA1` by specifying `UseSha1ForShortening` when configuring the `AzureStorageQueueTransport`:
 
 snippet:AzureStorageQueueUseSha1InsteadOfMD5
 
